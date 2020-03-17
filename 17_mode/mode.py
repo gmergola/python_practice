@@ -1,3 +1,14 @@
+def frequency_counter(nums):
+    freq = {}
+    for num in nums:
+        if num not in freq:
+            freq[num] = 1
+        else:
+            freq[num]+= 1
+    
+    return freq
+
+
 def mode(nums):
     """Return most-common number in list.
 
@@ -11,3 +22,12 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    freq = frequency_counter(nums)
+    return freq[max(freq.values())]
+
+print(mode([1, 2, 1]))
+
+
+
+

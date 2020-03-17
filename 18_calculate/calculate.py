@@ -25,3 +25,23 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
 
         >>> calculate('foo', 2, 3) is None
     """
+
+    if operation == 'subtract':
+        if make_int:
+            return f"{message} {int(a - b)}"
+        else:
+            return f"{message} {a - b}"
+    if operation == 'add':
+        return f"{message} {a + b}"
+    if operation == 'multiply':
+        return f"{message} {a * b}"
+    if operation == 'divide':
+        if make_int:
+            return f"{message} {a // b}"
+        else:
+            return f"{message} {a / b}"
+    return None
+ #honestly not sure why failing a test
+       
+
+print(calculate('foo', 10, 4, message= 'I got'))

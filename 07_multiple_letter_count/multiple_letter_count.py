@@ -10,12 +10,15 @@ def multiple_letter_count(phrase):
     
     let_freq = {}
     for letter in phrase:
-        if not letter in let_freq:
+        if letter not in let_freq:
             let_freq[letter] = 1
         else:
             let_freq[letter]+= 1
 
     return let_freq
+
+    # comprehension
+
 
 
 print(multiple_letter_count('yay'))

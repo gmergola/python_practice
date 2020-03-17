@@ -22,10 +22,7 @@ def is_palindrome(phrase):
         True
     """
     word = phrase.replace(" ", "").lower()
-    if word[len(word)::-1] == word:
-        return True
-    else:
-        return False
+    return word[len(word)::-1] == word
 
 
 print(is_palindrome("Taco cat"))
